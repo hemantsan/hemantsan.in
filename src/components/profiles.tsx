@@ -18,7 +18,7 @@ export default function Profiles() {
         <div className='flex gap-x-4'>
           <img src='/assets/anim_new.gif' alt='new' />
           <a
-            href='https://github.com/hemantsankhla'
+            href='https://www.linkedin.com/in/hemant-sankhla/'
             target='_blank'
             className='text-lg text-[#00ff00] underline hover:bg-amber-400 hover:text-blue-700'
           >
@@ -30,7 +30,7 @@ export default function Profiles() {
         <div className='flex gap-x-4'>
           <img src='/assets/anim_new.gif' alt='new' />
           <a
-            href='https://github.com/hemantsankhla'
+            href='https://stackoverflow.com/users/3903902/hemant'
             target='_blank'
             className='text-lg text-[#00ff00] underline hover:bg-amber-400 hover:text-blue-700'
           >
@@ -42,7 +42,7 @@ export default function Profiles() {
         <div className='flex gap-x-4'>
           <img src='/assets/anim_new.gif' alt='new' />
           <a
-            href='https://github.com/hemantsankhla'
+            href='https://github.com/hemantsan'
             target='_blank'
             className='text-lg text-[#00ff00] underline hover:bg-amber-400 hover:text-blue-700'
           >
