@@ -1,94 +1,91 @@
 export default function Intro() {
   return (
-    <div className='mt-4 flex flex-col items-center justify-center w-full'>
-      <div className='win95-window w-full'>
-        <div className='win95-titlebar'>
-          <span>💻 HEMANT.EXE — [Running]</span>
-          <div style={{ display: 'flex', gap: '3px' }}>
-            <button className='win95-btn'>_</button>
-            <button className='win95-btn'>□</button>
-            <button className='win95-btn'>✕</button>
+    <div>
+      {/* Item header — mirrors Wolf Fang icon + name block */}
+      <div className='lo-item-header'>
+        <div className='lo-item-icon'>
+          <img src='/assets/goku.gif' alt='Hemant' />
+        </div>
+
+        <div className='lo-item-info'>
+          <div className='lo-item-name rainbow-text'>Hemant Sankhla</div>
+          <div className='lo-item-subtitle'>Frontend Developer</div>
+          <div className='lo-item-icons-row'>
+            <img src='/assets/fire.gif' style={{ height: '20px' }} alt='fire' />
+            <img src='/assets/fire.gif' style={{ height: '20px' }} alt='fire' />
           </div>
         </div>
 
-        <div className='win95-content'>
-          <div
-            className='flex items-center justify-center'
-            style={{ gap: '16px' }}
-          >
-            <img src='/assets/fire.gif' className='h-16' alt='fire' />
-            <div className='flex flex-col items-center'>
-              <h1 className='text-center text-4xl font-bold rainbow-text'>
-                Hemant Sankhla
-              </h1>
-              <p
-                className='text-center text-xl font-semibold blink'
-                style={{ color: '#00ffff', marginTop: '4px' }}
-              >
-                *** Frontend Developer ***
-              </p>
-            </div>
-            <img src='/assets/fire.gif' className='h-16' alt='fire' />
-          </div>
-
-          <div className='retro-hr' style={{ margin: '14px 0' }}></div>
-
-          <p className='text-center' style={{ fontSize: '14px', lineHeight: '1.7' }}>
-            Hello my name is Hemant Sankhla, I am a Frontend Developer. I
-            primarily work with JavaScript/Typescript, ReactJS, HTML and CSS. I
-            am a self taught developer and I love my work.
-          </p>
-
-          <p
-            className='text-center'
-            style={{ fontSize: '14px', lineHeight: '1.7', marginTop: '10px' }}
-          >
-            Consistently trying to learn new things and improve my skills.
-          </p>
-
-          <p
-            className='text-center'
-            style={{ fontSize: '14px', lineHeight: '1.7', marginTop: '10px' }}
-          >
-            I also have some experience in backend development working with PHP,
-            Laravel, Magento, MySql.
-          </p>
-
-          <div
-            className='flex justify-center'
-            style={{ marginTop: '16px' }}
-          >
-            <img src='/assets/goku.gif' className='h-36' alt='goku' />
-          </div>
-
-          <div className='retro-hr' style={{ margin: '14px 0' }}></div>
-
-          <div className='flex flex-col items-center' style={{ gap: '4px' }}>
-            <span
-              style={{
-                color: '#ffff00',
-                fontSize: '11px',
-                fontFamily: 'Arial, sans-serif',
-                letterSpacing: '2px',
-              }}
-            >
-              YOU ARE VISITOR #
-            </span>
-            <span className='counter-display'>004269</span>
-            <span
-              className='blink'
-              style={{
-                color: '#ff0000',
-                fontSize: '11px',
-                fontFamily: 'Arial, sans-serif',
-                marginTop: '4px',
-              }}
-            >
-              ★ THANK YOU FOR VISITING ★
-            </span>
-          </div>
+        {/* Corner — mirrors the comment/reaction count */}
+        <div className='lo-item-corner'>
+          <img src='/assets/anim_new.gif' alt='new' />
+          <span>Self-Taught</span>
         </div>
       </div>
+
+      {/* Description — mirrors the item lore text */}
+      <div className='lo-item-desc'>
+        <p className='lo-item-desc__text'>
+          Hello, my name is Hemant Sankhla. I am a Frontend Developer primarily
+          working with JavaScript / TypeScript, ReactJS, HTML and CSS. I am a
+          self-taught developer and I love my work.
+        </p>
+        <p className='lo-item-desc__text' style={{ marginTop: '6px' }}>
+          Consistently trying to learn new things and improve my skills.
+        </p>
+        <p className='lo-item-desc__type'>Frontend Developer · Self-Taught</p>
+
+        <hr className='lo-item-desc__divider' />
+
+        {/* Mirrors "Available for Purchase: No / Sells for 1 gil" */}
+        <div className='lo-item-stat'>
+          Available for Hire:{' '}
+          <span className='lo-item-stat__pos'>Yes</span>
+        </div>
+        <div className='lo-item-stat'>
+          Backend Experience:{' '}
+          <span className='lo-item-stat__pos'>PHP · Laravel · MySQL</span>
+        </div>
+      </div>
+
+      {/* Section header — mirrors "Obtained From" */}
+      <div className='lo-section-header'>Profile Details</div>
+
+      {/* Stats table */}
+      <table className='lo-table'>
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className='lo-table__cell-name'>Role</td>
+            <td>Frontend Developer</td>
+          </tr>
+          <tr>
+            <td className='lo-table__cell-name'>Experience</td>
+            <td>
+              Self-Taught
+              <div className='lo-table__cell-name-sub'>JavaScript, ReactJS, HTML, CSS</div>
+            </td>
+          </tr>
+          <tr>
+            <td className='lo-table__cell-name'>Backend</td>
+            <td>
+              PHP · Laravel · Magento
+              <div className='lo-table__cell-name-sub'>MySQL · Some Experience</div>
+            </td>
+          </tr>
+          <tr>
+            <td className='lo-table__cell-name'>Visitors</td>
+            <td>
+              <span className='counter-display'>004269</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   )
 }
