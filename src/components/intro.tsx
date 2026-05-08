@@ -9,10 +9,11 @@ export default function Intro() {
 
         <div className='lo-item-info'>
           <div className='lo-item-name rainbow-text'>Hemant Sankhla</div>
-          <div className='lo-item-subtitle'>Frontend Developer</div>
+          <div className='lo-item-subtitle'>Full Stack GenAI Builder</div>
           <div className='lo-item-icons-row'>
-            <img src='/assets/fire.gif' style={{ height: '20px' }} alt='fire' />
-            <img src='/assets/fire.gif' style={{ height: '20px' }} alt='fire' />
+            {Array.from({ length: 7 }).map((_, i) => (
+              <img key={i} src='/assets/fire.gif' style={{ height: '20px' }} alt='fire' />
+            ))}
           </div>
         </div>
 
@@ -26,14 +27,15 @@ export default function Intro() {
       {/* Description — mirrors the item lore text */}
       <div className='lo-item-desc'>
         <p className='lo-item-desc__text'>
-          Hello, my name is Hemant Sankhla. I am a Frontend Developer primarily
-          working with JavaScript / TypeScript, ReactJS, HTML and CSS. I am a
-          self-taught developer and I love my work.
+          Hey, I'm Hemant — a Full Stack GenAI Builder who started out self-taught
+          and never really stopped learning. I spend most of my time in JavaScript,
+          TypeScript, and React on the frontend, and Node, Python on the backend.
         </p>
         <p className='lo-item-desc__text' style={{ marginTop: '6px' }}>
-          Consistently trying to learn new things and improve my skills.
+          Lately I've been deep into AI — RAG pipelines, agentic workflows, and
+          wiring up LLMs into real products. I just like building things that work.
         </p>
-        <p className='lo-item-desc__type'>Frontend Developer · Self-Taught</p>
+        <p className='lo-item-desc__type'>Full Stack GenAI Builder · Self-Taught</p>
 
         <hr className='lo-item-desc__divider' />
 
@@ -44,7 +46,7 @@ export default function Intro() {
         </div>
         <div className='lo-item-stat'>
           Backend Experience:{' '}
-          <span className='lo-item-stat__pos'>PHP · Laravel · MySQL</span>
+          <span className='lo-item-stat__pos'>Python · Postgres · PHP · NodeJS · MySQL</span>
         </div>
       </div>
 
@@ -62,20 +64,20 @@ export default function Intro() {
         <tbody>
           <tr>
             <td className='lo-table__cell-name'>Role</td>
-            <td>Frontend Developer</td>
+            <td>Full Stack GenAI Builder</td>
           </tr>
           <tr>
             <td className='lo-table__cell-name'>Experience</td>
             <td>
-              Self-Taught
+              9 Years
               <div className='lo-table__cell-name-sub'>JavaScript, ReactJS, HTML, CSS</div>
             </td>
           </tr>
           <tr>
             <td className='lo-table__cell-name'>Backend</td>
             <td>
-              PHP · Laravel · Magento
-              <div className='lo-table__cell-name-sub'>MySQL · Some Experience</div>
+              Python FastAPI · PHP · Laravel
+              <div className='lo-table__cell-name-sub'>MySQL · NodeJS · Some Experience</div>
             </td>
           </tr>
           <tr>

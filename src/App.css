@@ -40,7 +40,10 @@ html {
 
 body {
   background-color: var(--lo-page-bg);
-  background-image: url('/assets/starry.jpg');
+  background-image: url('https://lds-img.finalfantasyxiv.com/h/q/X5HUeL_HzZnz-gJX83LUeeeJMQ.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: var(--lo-text);
   margin: 0;
   padding: 0;
@@ -84,7 +87,7 @@ body {
   font-size: 12px;
 }
 
-/* ===== TWO-COLUMN BODY ===== */
+/* ===== BODY ===== */
 
 .lo-body {
   display: flex;
@@ -447,7 +450,7 @@ body {
   background-color: #0e0e0a;
   border-bottom: 1px solid #2a2a1a;
   padding: 3px 0;
-  color: #555544;
+  color: #ffffff;
   font-family: 'Courier New', monospace;
   font-size: 11px;
 }
