@@ -1,15 +1,64 @@
-const techPrimary = [
-  { src: '/assets/js.png', label: 'JavaScript' },
-  { src: '/assets/ts.png', label: 'TypeScript' },
-  { src: '/assets/react.png', label: 'ReactJS' },
-  { src: '/assets/css.png', label: 'CSS' },
-]
+type TechItem =
+  | { src: string; emoji?: never; label: string }
+  | { emoji: string; src?: never; label: string }
 
-const techSecondary = [
-  { src: '/assets/html.png', label: 'HTML' },
-  { src: '/assets/php.png', label: 'PHP' },
-  { src: '/assets/laravel.png', label: 'Laravel' },
-  { src: '/assets/mysql.png', label: 'MySQL' },
+type TechGroup = { title: string; items: TechItem[] }
+
+const techGroups: TechGroup[] = [
+  {
+    title: 'Frontend',
+    items: [
+      { src: '/assets/js.png',    label: 'JavaScript' },
+      { src: '/assets/ts.png',    label: 'TypeScript' },
+      { src: '/assets/react.png', label: 'ReactJS' },
+      { src: '/assets/html.png',  label: 'HTML' },
+      { src: '/assets/css.png',   label: 'CSS' },
+    ],
+  },
+  {
+    title: 'Backend',
+    items: [
+      { src: '/assets/py.png',  label: 'Python' },
+      { src: '/assets/php.png', label: 'PHP' },
+      { emoji: '🟩',            label: 'NodeJS' },
+    ],
+  },
+  {
+    title: 'Database',
+    items: [
+      { src: '/assets/mysql.png', label: 'MySQL' },
+      { emoji: '🐘',              label: 'Postgres' },
+    ],
+  },
+  {
+    title: 'Frameworks',
+    items: [
+      { src: '/assets/laravel.png', label: 'Laravel' },
+      { emoji: '🔥',               label: 'Hono' },
+      { emoji: '⚡',               label: 'Fastify' },
+      { emoji: '🏗️',               label: 'NestJS' },
+      { emoji: '🚀',               label: 'FastAPI' },
+      { emoji: '🎸',               label: 'Django' },
+    ],
+  },
+  {
+    title: 'AI / Tools',
+    items: [
+      { emoji: '🤖', label: 'Claude (Anthropic)' },
+      { emoji: '🖱️', label: 'Cursor Agents' },
+      { emoji: '🔍', label: 'RAG' },
+      { emoji: '🗄️', label: 'Vector DB' },
+      { emoji: '⚙️', label: 'Agentic Workflow' },
+    ],
+  },
+  {
+    title: 'Mobile',
+    items: [
+      { src: '/assets/rn.png', label: 'React Native' },
+      { src: '/assets/kt.png', label: 'Kotlin' },
+      { emoji: '💙',           label: 'Flutter' },
+    ],
+  },
 ]
 
 export default function Tech() {
@@ -26,77 +75,69 @@ export default function Tech() {
         </div>
 
         <div className='win95-content'>
-          <p
-            style={{
-              color: '#ffff00',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontFamily: 'Courier New, monospace',
-              letterSpacing: '2px',
-              marginBottom: '12px',
-            }}
-          >
-            ▶ PRIMARY STACK ◀
-          </p>
-
-          <div className='flex w-full justify-between items-end'>
-            {techPrimary.map(({ src, label }) => (
-              <div
-                key={label}
-                className='flex flex-col items-center'
-                style={{ gap: '6px' }}
+          {techGroups.map(({ title, items }) => (
+            <div key={title} style={{ marginBottom: '16px' }}>
+              <p
+                style={{
+                  color: '#ffff00',
+                  textAlign: 'center',
+                  fontSize: '12px',
+                  fontFamily: 'Courier New, monospace',
+                  letterSpacing: '2px',
+                  marginBottom: '10px',
+                }}
               >
-                <img src={src} alt={label} style={{ height: '48px', width: '48px' }} />
-                <span
-                  style={{
-                    color: '#00ff00',
-                    fontSize: '10px',
-                    fontFamily: 'Arial, sans-serif',
-                    textAlign: 'center',
-                  }}
-                >
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
+                ▶ {title.toUpperCase()} ◀
+              </p>
 
-          <div className='retro-hr' style={{ margin: '14px 0' }}></div>
-
-          <p
-            style={{
-              color: '#ffff00',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontFamily: 'Courier New, monospace',
-              letterSpacing: '2px',
-              marginBottom: '12px',
-            }}
-          >
-            ▶ BACKEND / SECONDARY ◀
-          </p>
-
-          <div className='flex w-full justify-between items-end'>
-            {techSecondary.map(({ src, label }) => (
               <div
-                key={label}
-                className='flex flex-col items-center'
-                style={{ gap: '6px' }}
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                  justifyContent: 'center',
+                }}
               >
-                <img src={src} alt={label} style={{ height: '48px', width: '48px' }} />
-                <span
-                  style={{
-                    color: '#00ff00',
-                    fontSize: '10px',
-                    fontFamily: 'Arial, sans-serif',
-                    textAlign: 'center',
-                  }}
-                >
-                  {label}
-                </span>
+                {items.map(({ src, emoji, label }) => (
+                  <div
+                    key={label}
+                    className='flex flex-col items-center'
+                    style={{ gap: '4px', minWidth: '48px' }}
+                  >
+                    {src ? (
+                      <img src={src} alt={label} style={{ height: '40px', width: '40px' }} />
+                    ) : (
+                      <span
+                        style={{
+                          fontSize: '32px',
+                          lineHeight: '40px',
+                          width: '40px',
+                          textAlign: 'center',
+                          display: 'block',
+                        }}
+                      >
+                        {emoji}
+                      </span>
+                    )}
+                    <span
+                      style={{
+                        color: '#00ff00',
+                        fontSize: '9px',
+                        fontFamily: 'Arial, sans-serif',
+                        textAlign: 'center',
+                        maxWidth: '60px',
+                        lineHeight: '1.2',
+                      }}
+                    >
+                      {label}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+
+              <div className='retro-hr' style={{ margin: '12px 0 0' }}></div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

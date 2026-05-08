@@ -33,6 +33,23 @@ export default function Welcome() {
         ))}
       </div>
 
+      <div
+        className='blink'
+        style={{
+          textAlign: 'center',
+          padding: '8px 0',
+          background: 'linear-gradient(90deg, #ff0000, #ff8800, #ffff00, #00ff00, #00ffff, #8800ff, #ff0000)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontSize: '26px',
+          fontWeight: '900',
+          letterSpacing: '4px',
+        }}
+      >
+        ★ OPEN TO WORK ★
+      </div>
+
       <img src={'/assets/kitt.gif'} alt='line' className='w-full' />
     </div>
   )

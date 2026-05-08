@@ -25,7 +25,7 @@ export default function Intro() {
                 className='text-center text-xl font-semibold blink'
                 style={{ color: '#00ffff', marginTop: '4px' }}
               >
-                *** Frontend Developer ***
+                *** Full Stack GenAI Builder ***
               </p>
             </div>
             <img src='/assets/fire.gif' className='h-16' alt='fire' />
@@ -33,25 +33,39 @@ export default function Intro() {
 
           <div className='retro-hr' style={{ margin: '14px 0' }}></div>
 
+          <div className='flex justify-center' style={{ gap: '4px', marginBottom: '12px' }}>
+            {Array.from({ length: 7 }).map((_, i) => (
+              <img key={i} src='/assets/fire.gif' style={{ height: '20px' }} alt='fire' />
+            ))}
+          </div>
+
           <p className='text-center' style={{ fontSize: '14px', lineHeight: '1.7' }}>
-            Hello my name is Hemant Sankhla, I am a Frontend Developer. I
-            primarily work with JavaScript/Typescript, ReactJS, HTML and CSS. I
-            am a self taught developer and I love my work.
+            Hey, I'm Hemant — a Full Stack GenAI Builder who started out self-taught
+            and never really stopped learning. I spend most of my time in JavaScript,
+            TypeScript, and React on the frontend, and Node, Python on the backend.
           </p>
 
           <p
             className='text-center'
             style={{ fontSize: '14px', lineHeight: '1.7', marginTop: '10px' }}
           >
-            Consistently trying to learn new things and improve my skills.
+            Lately I've been deep into AI — RAG pipelines, agentic workflows, and
+            wiring up LLMs into real products. I just like building things that work.
           </p>
 
           <p
             className='text-center'
             style={{ fontSize: '14px', lineHeight: '1.7', marginTop: '10px' }}
           >
-            I also have some experience in backend development working with PHP,
-            Laravel, Magento, MySql.
+            9 years of experience · Available for Hire:{' '}
+            <span style={{ color: '#00ff00', fontWeight: 'bold' }}>Yes</span>
+          </p>
+
+          <p
+            className='text-center'
+            style={{ fontSize: '14px', lineHeight: '1.7', marginTop: '10px' }}
+          >
+            Backend: Python FastAPI · PHP · Laravel · NodeJS · MySQL · Postgres
           </p>
 
           <div

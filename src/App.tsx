@@ -1,7 +1,6 @@
 import './App.css'
 import Footer from './components/footer'
 import Intro from './components/intro'
-import Learning from './components/learning'
 import Profiles from './components/profiles'
 import Tech from './components/tech'
 import Welcome from './components/welcome'
@@ -15,8 +14,6 @@ function App() {
         <Intro />
 
         <Tech />
-
-        <Learning />
 
         <Profiles />
       </div>
